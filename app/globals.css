@@ -14,14 +14,14 @@
   --border-gray: #cdd3e1; /* Default border color */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
     --hover-color: #e20101;
     --border-gray: #cdd3e1;
   }
-}
+} */
 
 html,
 body {
@@ -42,7 +42,6 @@ main {
   flex-direction: column;
 }
 
-/* 🔴 Change text color on hover */
 a:hover,
 li:hover,
 span:hover {

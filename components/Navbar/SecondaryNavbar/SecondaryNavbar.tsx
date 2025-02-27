@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SecondaryNavbar = () => {
   return (
-    <div className="preheader w-full flex justify-end pl-2 pr-6 lg:pl-2 lg:pr-12">
+    <div className="preheader w-full flex justify-end pl-4 pr-6 lg:pr-10">
       <ul className="flex flex-row items-center">
         <li>
           <Link
