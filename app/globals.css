@@ -1,8 +1,6 @@
 @font-face {
   font-family: "Resolve Sans Light";
-  src: url("/Fonts/resolve_sans/Resolve-Light.otf") format("opentype");
-  font-weight: 600;
-  font-style: wide;
+  src: url("/fonts/resolve_sans/resolve-light.otf") format("opentype");
 }
 
 @tailwind base;
@@ -11,21 +9,42 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #061d50;
+  --hover-color: #e20101;
+  --border-gray: #cdd3e1; /* Default border color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --hover-color: #e20101;
+    --border-gray: #cdd3e1;
   }
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Resolve Sans Light", helvetica, arial, sans-serif;
+}
+
+main {
   display: flex;
-  justify-content: space-between;
+  flex-grow: 1;
   flex-direction: column;
+}
+
+/* 🔴 Change text color on hover */
+a:hover,
+li:hover,
+span:hover {
+  color: var(--hover-color);
 }

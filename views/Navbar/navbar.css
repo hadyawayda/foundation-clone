@@ -1,0 +1,28 @@
+.navbar {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 0.7rem 50px 0.7rem 1rem;
+}
+
+.preheader {
+  height: 2.2rem;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #f3f5f7;
+}
+
+.nav-item {
+  border-left: 2px solid var(--hover-color);
+}
+
+.navbar:hover .nav-item {
+  border-left: 2px solid var(--border-gray);
+}
+
+.navbar .nav-item:hover {
+  border-left: 2px solid var(--hover-color) !important;
+}
+
+@media screen and (max-width: 1268px) {
+  .nav-item {
+    font-size: 13px;
+  }
+}
