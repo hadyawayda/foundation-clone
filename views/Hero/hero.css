@@ -6,6 +6,10 @@
   margin-top: 54px;
 }
 
+.baseline-container {
+  margin-bottom: 120px;
+}
+
 .background-video {
   width: 100%;
   height: 23rem;
@@ -13,17 +17,12 @@
 }
 
 .baseline-heading {
-  font-size: 64px;
+  font-size: 48px;
   font-family: "Resolve Sans Regular";
   font-weight: 700;
   margin-top: 64px;
   margin-bottom: 24px;
   text-align: center;
-}
-
-.baseline-container {
-  margin-left: 58px;
-  margin-right: 58px;
 }
 
 .baseline-paragraph {
@@ -33,7 +32,7 @@
 
 @media screen and (max-width: 640) {
   .baseline-heading {
-    font-size: 32px;
+    font-size: 36px;
   }
   .baseline-paragraph {
     font-size: 16px;
@@ -41,7 +40,16 @@
 }
 
 @media screen and (min-width: 900) {
+  .baseline-heading {
+    font-size: 64px;
+  }
+
   .background-video {
     height: 41.75rem;
+  }
+
+  .baseline-container {
+    margin-left: 58px;
+    margin-right: 58px;
   }
 }
