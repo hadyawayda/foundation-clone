@@ -1,6 +1,11 @@
+nav {
+	position: fixed;
+}
+
 .navbar {
+  background-color: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  padding: 0.7rem 50px 0.7rem 1rem;
+  height: 88px;
 }
 
 .preheader {
@@ -10,7 +15,12 @@
 }
 
 .nav-item {
+  display: flex;
+  align-items: center;
+  height: 15px;
+  font-size: 15px;
   border-left: 2px solid var(--hover-color);
+  white-space: nowrap;
 }
 
 .navbar:hover .nav-item {
@@ -21,8 +31,39 @@
   border-left: 2px solid var(--hover-color) !important;
 }
 
-@media screen and (max-width: 1280px) {
+.nav-menu{
+  grid-template-columns: repeat(4, auto);
+}
+
+@media screen and (max-width: 899) {
+  .navbar {
+	height: 54px;
+  }
+  .nav-menu, .preheader{
+	display: none;
+  }
+  .navigation-mobile {
+	display: flex;
+  }
+  .better-ways-logo {
+	width: 120px;
+  }
+}
+
+@media screen and (max-width: 1279) {
   .nav-item {
     font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1280) {
+  .navbar {
+    padding: 11.2px 50px 11.2px 1rem;
+  }
+}
+
+@media screen and (min-width: 1460) {
+  .nav-menu{
+    display: flex;
   }
 }

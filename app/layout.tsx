@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./page.css";
 import Navbar from "../views/Navbar/Navbar";
 import Footer from "../views/Footer/Footer";
 
@@ -16,9 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col w-full">
+      <body className="flex flex-col min-w-screen">
         <Navbar />
-        <main>{children}</main>
+        <main>
+		  {children}
+		</main>
         <Footer />
       </body>
     </html>

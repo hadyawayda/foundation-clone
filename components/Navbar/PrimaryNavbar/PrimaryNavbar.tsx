@@ -3,46 +3,64 @@ import Link from "next/link";
 
 const PrimaryNavbar = () => {
   return (
-    <div className="navbar flex items-center justify-between w-full px-6 py-2 h-20">
+    <div className="navbar flex items-center justify-between w-full py-2 px-5 xl:px-6 xl:pl-8">
       <div className="flex items-center pr-6">
         <Image
+		  className="better-ways-logo"
           src="/Assets/Images/logo-better-ways.svg"
-          width={150}
+          width={200}
           height={40}
           alt="CMA CGM Logo"
         />
       </div>
+	  <ul className="nav-menu grid items-center font-extrabold text-center gap-x-2 gap-y-4 ml-8 p-2 xl:gap-x-4 xl:ml-4">
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/cma-cgm-group">The CMA CGM Group</Link>
+		</li>
 
-      <ul className="grid grid-cols-4 xl:flex items-center font-extrabold text-sm text-center gap-x-3 gap-y-2 xl:gap-x-6">
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/cma-cgm-group">The CMA CGM Group</Link>
-        </li>
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/sustainability">Sustainability</Link>
+		</li>
 
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/sustainability">Sustainability</Link>
-        </li>
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/decarbonization">Decarbonization</Link>
+		</li>
 
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/decarbonization">Decarbonization</Link>
-        </li>
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/innovation">Innovation</Link>
+		</li>
 
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/innovation">Innovation</Link>
-        </li>
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/careers">Careers</Link>
+		</li>
 
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/careers">Careers</Link>
-        </li>
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/news-media">News & Media</Link>
+		</li>
 
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/news-media">News & Media</Link>
-        </li>
-
-        <li className="nav-item pl-6 border-l-2 xl:justify-self-start">
-          <Link href="/cma-cgm-foundation">The CMA CGM Foundation</Link>
-        </li>
+		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
+		  <Link href="/cma-cgm-foundation">The CMA CGM Foundation</Link>
+		</li>
       </ul>
-    </div>
+	  <div className="navigation-mobile hidden">
+	    <Image
+	  	  className="mx-4"
+	  	  src="/Assets/Images/icon-search.svg"
+	  	  width={22}
+	  	  height={21}
+	  	  alt="Search Button"
+	    />
+		<button >
+		  <Image
+	  	    className="mx-4"
+	  	    src="/Assets/Images/icon-menu.svg"
+	  	    width={22}
+	  	    height={21}
+	  	    alt="Search Button"
+	      />
+		</button>
+	  </div>
+	  </div>
   );
 };
 
