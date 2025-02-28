@@ -2,7 +2,7 @@ const BackgroundVideo = () => {
 	return (
 	  <div className="background-video-container">
 		<video
-		  className="background-video absolute "
+		  className="background-video "
 		  autoPlay
 		  muted
 		  loop

@@ -3,6 +3,11 @@
   src: url("/fonts/resolve_sans/resolve-light.otf") format("opentype");
 }
 
+@font-face {
+	font-family: "Resolve Sans Regular";
+	src: url("/fonts/resolve_sans/resolve-regular.otf") format("opentype");
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,12 +41,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Resolve Sans Light", helvetica, arial, sans-serif;
-}
-
-main {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
 }
 
 a:hover,
