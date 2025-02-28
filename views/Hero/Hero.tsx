@@ -1,6 +1,6 @@
 import "./hero.css";
-import BackgroundVideo from "./BackgroundVideo/BackgroundVideo";
-import Baseline from "./BackgroundVideo/Baseline";
+import BackgroundVideo from "../../components/Hero/BackgroundVideo";
+import Baseline from "../../components/Hero/Baseline";
 
 const Hero = () => {
 	return (

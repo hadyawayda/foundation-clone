@@ -1,13 +1,14 @@
+.background-video-container {
+	margin-top: 123px;
+	width: 100%;
+	overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
 .background-video {
 	width: 100%;
 	height: 23rem;
 	object-fit: cover;
-}
-
-.background-video-container {
-	width: 100%;
-	overflow-clip-margin: content-box;
-    overflow: clip;
 }
 
 .baseline-heading {
