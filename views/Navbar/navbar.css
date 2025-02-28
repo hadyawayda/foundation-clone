@@ -37,7 +37,13 @@
 }
 
 @media screen and (min-width: 1280) {
-	.navbar {
-	  padding: 11.2px 50px 11.2px 1rem;
-	}
+  .navbar {
+    padding: 11.2px 50px 11.2px 1rem;
   }
+}
+
+@media screen and (min-width: 1460) {
+  .nav-menu{
+    display: flex;
+  }
+}

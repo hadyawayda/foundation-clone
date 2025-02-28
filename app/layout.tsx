@@ -18,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col w-full">
         <Navbar />
-        <main>{children}</main>
+        <main>
+		  {children}
+		</main>
         <Footer />
       </body>
     </html>

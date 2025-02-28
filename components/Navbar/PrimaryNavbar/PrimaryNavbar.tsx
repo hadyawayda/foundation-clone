@@ -12,7 +12,7 @@ const PrimaryNavbar = () => {
           alt="CMA CGM Logo"
         />
       </div>
-	  <ul className="nav-menu grid 2xl:flex items-center font-extrabold text-center gap-x-2 gap-y-4 ml-8 p-2 xl:gap-x-4 xl:ml-4">
+	  <ul className="nav-menu grid items-center font-extrabold text-center gap-x-2 gap-y-4 ml-8 p-2 xl:gap-x-4 xl:ml-4">
 		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
 		  <Link href="/cma-cgm-group">The CMA CGM Group</Link>
 		</li>
