@@ -21,7 +21,7 @@
   border-left: 2px solid var(--hover-color) !important;
 }
 
-@media screen and (max-width: 1268px) {
+@media screen and (max-width: 1280px) {
   .nav-item {
     font-size: 13px;
   }
