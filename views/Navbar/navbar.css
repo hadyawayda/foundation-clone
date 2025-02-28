@@ -30,6 +30,21 @@
   grid-template-columns: repeat(4, auto);
 }
 
+@media screen and (max-width: 899) {
+  .navbar {
+	height: 54px;
+  }
+  .nav-menu, .preheader{
+	display: none;
+  }
+  .navigation-mobile {
+	display: flex;
+  }
+  .better-ways-logo {
+	width: 120px;
+  }
+}
+
 @media screen and (max-width: 1279) {
   .nav-item {
     font-size: 13px;

@@ -6,6 +6,7 @@ const PrimaryNavbar = () => {
     <div className="navbar flex items-center justify-between w-full py-2 px-5 xl:px-6 xl:pl-8">
       <div className="flex items-center pr-6">
         <Image
+		  className="better-ways-logo"
           src="/Assets/Images/logo-better-ways.svg"
           width={200}
           height={40}
@@ -40,8 +41,26 @@ const PrimaryNavbar = () => {
 		<li className="nav-item px-5 xl:pl-8 xl:pr-4 border-l-2">
 		  <Link href="/cma-cgm-foundation">The CMA CGM Foundation</Link>
 		</li>
-		</ul>
-    </div>
+      </ul>
+	  <div className="navigation-mobile hidden">
+	    <Image
+	  	  className="mx-4"
+	  	  src="/Assets/Images/icon-search.svg"
+	  	  width={22}
+	  	  height={21}
+	  	  alt="Search Button"
+	    />
+		<button >
+		  <Image
+	  	    className="mx-4"
+	  	    src="/Assets/Images/icon-menu.svg"
+	  	    width={22}
+	  	    height={21}
+	  	    alt="Search Button"
+	      />
+		</button>
+	  </div>
+	  </div>
   );
 };
 
