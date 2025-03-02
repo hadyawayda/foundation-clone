@@ -1,3 +1,30 @@
 .foundation-container {
-  height: 45vw;
-}
+	height: 45vw;
+  }
+  
+  /* Base state for label container */
+  .foundation-label-container {
+	transition: opacity 0.5s ease-in-out !important;
+	opacity: 1;
+  }
+  
+  /* When hovering the main container, hide all labels */
+  .foundation-container:hover .foundation-label-container {
+	opacity: 0;
+  }
+  
+  /* When hovering an image container, show its label container */
+  .foundation-image-container:hover .foundation-label-container {
+	opacity: 1 !important;
+  }
+  
+  /* Arrow setup with transition but no transform by default */
+  .foundation-arrow {
+	transition: transform 0.5s ease-in-out !important;
+	transform: translate(0, 0);
+  }
+  
+  /* ONLY animate arrow when directly hovering the label container */
+  .foundation-label-container:hover .foundation-arrow {
+	transform: translate(10px, -10px);
+  }

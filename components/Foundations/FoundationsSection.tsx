@@ -4,14 +4,14 @@ import { images } from "../../constants/Foundation";
 
 const FoundationsSection = () => {
   return (
-    <div className="foundation-container w-full overflow-hidden group">
+    <div className="w-full overflow-hidden">
       {/* Desktop View */}
-      <div className="hidden lg:flex w-full h-[45vw]">
+      <div className="foundation-container hidden lg:flex w-full h-[45vw] group">
         {images.map((image, index) => (
           <Link
             key={index}
             href={image.href}
-            className="group/image relative flex-[1_1_33%] h-full transition-all duration-500 ease-in-out hover:flex-[1_1_70%] hover:siblings:flex-[1_1_15%]"
+            className="foundation-image-container relative flex-[1_1_33%] h-full transition-all duration-500 ease-in-out hover:flex-[1_1_70%] hover:siblings:flex-[1_1_15%]"
           >
             {/* Image */}
             <Image
@@ -27,13 +27,13 @@ const FoundationsSection = () => {
 
             {/* Label & Arrow Container */}
             {image.label && image.href && (
-              <div className="absolute inset-0 flex items-end justify-between px-4 pb-8 opacity-0 transition-opacity duration-500 group-hover/image:opacity-100 group-hover:opacity-0">
+              <div className="foundation-label-container absolute bottom-0 left-0 right-0 flex items-end justify-between px-4 pb-8 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
                 {/* Label */}
-                <div className="text-white text-4xl whitespace-nowrap">
+                <div className="foundation-label text-white text-4xl whitespace-nowrap">
                   {image.label}
                 </div>
-                {/* Arrow */}
-                <div className="relative transition-transform duration-500 ease-in-out group-hover/image:-translate-x-3 group-hover/image:-translate-y-3">
+                {/* Arrow (CSS Hover Animation Applied) */}
+                <div className="foundation-arrow relative">
                   <Image
                     src="/Assets/Images/arrow-white.svg"
                     width={24}
