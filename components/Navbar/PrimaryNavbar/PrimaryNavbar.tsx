@@ -74,7 +74,6 @@ const PrimaryNavbar = () => {
           />
         </button>
       </div>
-      
     </div>
   );
 };
