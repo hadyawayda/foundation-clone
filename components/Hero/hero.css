@@ -1,5 +1,4 @@
 .background-video-container {
-  margin-top: 123px;
   width: 100%;
   overflow-clip-margin: content-box;
   overflow: clip;
@@ -50,6 +49,9 @@
     margin-left: 58px;
     margin-right: 58px;
   }
+  .background-video-container {
+	margin-top: 123px;
+}
 }
 
 @media (max-width: 900px) {
