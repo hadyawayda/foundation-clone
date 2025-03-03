@@ -4,10 +4,10 @@ import "../../components/News/news.css";
 
 const News = () => {
   return (
-    <>
+    <div className="news-section">
       <NewsSection />
 	  <SubscribeSection />
-    </>
+    </div>
   );
 };
 

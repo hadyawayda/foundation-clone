@@ -1,7 +1,7 @@
 .news-section {
     background-size: cover;
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(228, 228, 228, 0.5)), url("/Assets/Images/bg-gradient.jpg") no-repeat center center fixed;
-	
+	padding-bottom: 24;
 }
 
 .news-label {
