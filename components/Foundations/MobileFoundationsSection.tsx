@@ -36,8 +36,8 @@ const MobileFoundationsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40"></div>
 
               {image.label && (
-                <div className="absolute bottom-2 left-6 right-0 flex items-end justify-between px-4 py-6">
-                  <div className="text-white font-semibold text-2xl">
+                <div className="absolute bottom-2 left-6 right-8 flex items-center justify-between px-4 py-6">
+                  <div className="text-white font-semibold text-4xl">
                     {image.label}
                   </div>
                   <div className="relative">
