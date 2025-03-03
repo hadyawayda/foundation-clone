@@ -4,9 +4,9 @@
 }
 
 @font-face {
-	font-family: "Resolve Sans Regular";
-	src: url("/fonts/resolve_sans/resolve-regular.otf") format("opentype");
-  }
+  font-family: "Resolve Sans Regular";
+  src: url("/fonts/resolve_sans/resolve-regular.otf") format("opentype");
+}
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +16,7 @@
   --background: #ffffff;
   --foreground: #061d50;
   --hover-color: #e20101;
-  --border-gray: #cdd3e1; /* Default border color */
+  --border-gray: #cdd3e1;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -30,16 +30,16 @@
 
 html,
 body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	width: 100vw;
-	width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  width: 100%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--foreground) !important;
+  background: var(--background) !important;
   font-family: "Resolve Sans Light", helvetica, arial, sans-serif;
 }
 

@@ -1,4 +1,4 @@
-import "./navbar.css";
+import "../../components/Navbar/navbar.css";
 import PrimaryNavbar from "../../components/Navbar/PrimaryNavbar/PrimaryNavbar";
 import SecondaryNavbar from "../../components/Navbar/SecondaryNavbar/SecondaryNavbar";
 

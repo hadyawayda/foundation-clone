@@ -1,5 +1,4 @@
-import "./hero.css";
-import "./foundation.css";
+import "../../components/Hero/hero.css";
 import BackgroundVideo from "../../components/Hero/BackgroundVideo";
 import Baseline from "../../components/Hero/Baseline";
 
