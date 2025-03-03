@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface MediaCardProps {
   title: string;
   date: string;
   imageSrc: string;
+  url: string;
   description: string;
   animationClass?: string;
 }
@@ -12,11 +14,12 @@ const MediaCard = ({
   title,
   date,
   imageSrc,
+  url,
   description,
   animationClass = "",
 }: MediaCardProps) => {
   return (
-    <div className={`foundation-card w-full sm:w-1/3 px-6 ${animationClass}`}>
+    <Link href={url} className={`foundation-card w-full sm:w-1/3 px-6 ${animationClass}`}>
       <div className="news-image-container relative overflow-hidden">
         <Image
           src={`/Assets/Images/${imageSrc}`}
@@ -31,9 +34,9 @@ const MediaCard = ({
       </div>
       <div className="mt-2">
         <p className="news-date font-black uppercase">{date}</p>
-        <p className="mt-2">{description}</p>
+        <p className="mt-2 news-description">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
