@@ -1,5 +1,6 @@
 nav {
 	position: fixed;
+	z-index: 1;
 }
 
 .navbar {
@@ -23,11 +24,11 @@ nav {
   white-space: nowrap;
 }
 
-.navbar:hover .nav-item {
+.nav-menu:hover .nav-item {
   border-left: 2px solid var(--border-gray);
 }
 
-.navbar .nav-item:hover {
+.nav-menu .nav-item:hover {
   border-left: 2px solid var(--hover-color) !important;
 }
 

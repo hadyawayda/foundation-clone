@@ -4,8 +4,7 @@ import { images } from "../../constants/Foundation";
 
 const FoundationsSection = () => {
   return (
-    <div className="w-full overflow-hidden">
-      {/* Desktop View */}
+    <div className="w-full -z-10">
       <div className="foundation-container hidden lg:flex w-full h-[45vw] group">
         {images.map((image, index) => (
           <Link
@@ -13,7 +12,6 @@ const FoundationsSection = () => {
             href={image.href}
             className="foundation-image-container relative flex-[1_1_33%] h-full transition-all duration-500 ease-in-out hover:flex-[1_1_70%] hover:siblings:flex-[1_1_15%]"
           >
-            {/* Image */}
             <Image
               className="object-cover w-full h-full"
               src={image.src}
@@ -22,18 +20,14 @@ const FoundationsSection = () => {
               alt={image.alt}
             />
 
-            {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40"></div>
 
-            {/* Label & Arrow Container */}
             {image.label && image.href && (
-              <div className="foundation-label-container absolute bottom-0 left-0 right-0 flex items-end justify-between px-4 pb-8 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
-                {/* Label */}
+              <div className="foundation-label-container absolute bottom-2 left-0 right-0 flex items-end justify-between px-4 py-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
                 <div className="foundation-label text-white text-4xl whitespace-nowrap">
                   {image.label}
                 </div>
-                {/* Arrow (CSS Hover Animation Applied) */}
-                <div className="foundation-arrow relative">
+                <div className="foundation-arrow right-4 xl:right-6 bottom-1.5 relative">
                   <Image
                     src="/Assets/Images/arrow-white.svg"
                     width={24}

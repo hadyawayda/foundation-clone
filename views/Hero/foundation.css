@@ -4,7 +4,7 @@
   
   /* Base state for label container */
   .foundation-label-container {
-	transition: opacity 0.5s ease-in-out !important;
+	transition: opacity 0.4s ease-in-out !important;
 	opacity: 1;
   }
   
@@ -20,7 +20,7 @@
   
   /* Arrow setup with transition but no transform by default */
   .foundation-arrow {
-	transition: transform 0.5s ease-in-out !important;
+	transition: transform 0.4s ease-in-out !important;
 	transform: translate(0, 0);
   }
   
