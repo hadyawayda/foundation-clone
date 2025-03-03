@@ -4,14 +4,18 @@ import { images } from "../../constants/Foundation";
 import DesktopFoundationsSection from "./DesktopFoundationsSection";
 
 const FoundationsSection = () => {
+  // Generate duplicate slides for the infinite effect
+  const duplicatedImages = [...images, ...images, ...images];
+  
   return (
     <div className="w-full -z-10">
       <DesktopFoundationsSection />
 
       {/* Mobile View - CSS Scroll-Snap Carousel */}
       <div className="lg:hidden relative w-full h-[70vh] overflow-hidden">
-        <div className="carousel">
-          {images.map((image, index) => (
+        {/* Add data attribute to allow script to find this element */}
+        <div className="carousel" data-infinite-carousel>
+          {duplicatedImages.map((image, index) => (
             <Link key={index} href={image.href} className="carousel-item">
               <Image
                 className="object-cover"
@@ -24,32 +28,103 @@ const FoundationsSection = () => {
 
               {/* Label */}
               {image.label && image.href && (
-							<div className="foundation-label-container absolute bottom-2 left-6 right-0 flex items-end justify-between px-4 py-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
-							  <div className="carousel-label text-white font-semibold text-4xl whitespace-nowrap">
-								{image.label}
-							  </div>
-							  <div className="foundation-arrow right-10 xl:right-6 bottom-1.5 relative">
-								<Image
-								className="carousel-arrow"
-								  src="/Assets/Images/arrow-white.svg"
-								  width={24}
-								  height={24}
-								  alt="Arrow Icon"
-								/>
-							  </div>
-							</div>
-						  )}
+                <div className="foundation-label-container absolute bottom-2 left-6 right-0 flex items-end justify-between px-4 py-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                  <div className="carousel-label text-white font-semibold text-4xl whitespace-nowrap">
+                    {image.label}
+                  </div>
+                  <div className="foundation-arrow right-10 xl:right-6 bottom-1.5 relative">
+                    <Image
+                      className="carousel-arrow"
+                      src="/Assets/Images/arrow-white.svg"
+                      width={24}
+                      height={24}
+                      alt="Arrow Icon"
+                    />
+                  </div>
+                </div>
+              )}
             </Link>
           ))}
         </div>
 
-        {/* Navigation Dots (Positioned at the Top) */}
+        {/* Navigation Dots */}
         <div className="carousel-nav">
           {images.map((_, index) => (
-            <a key={index} href={`#slide-${index}`} className="dot"></a>
+            <a key={index} href={`#slide-${index + images.length}`} className="dot"></a>
           ))}
         </div>
       </div>
+      
+      {/* Script tag for SSR-compatible carousel functionality */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              const carousel = document.querySelector('[data-infinite-carousel]');
+              if (!carousel) return;
+              
+              // Center the carousel initially
+              setTimeout(() => {
+                const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+                carousel.scrollLeft = itemWidth * ${images.length};
+              }, 100);
+              
+              // Set up touch/mouse events
+              let isDown = false;
+              let startX;
+              let scrollLeft;
+              
+              carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carousel.style.cursor = 'grabbing';
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+                e.preventDefault();
+              });
+              
+              carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+                carousel.style.cursor = 'grab';
+              });
+              
+              carousel.addEventListener('mouseup', () => {
+                isDown = false;
+                carousel.style.cursor = 'grab';
+              });
+              
+              carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 2;
+                carousel.scrollLeft = scrollLeft - walk;
+              });
+              
+              // Handle infinite scroll effect
+              carousel.addEventListener('scroll', () => {
+                const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+                const totalItems = ${duplicatedImages.length};
+                const totalOriginalItems = ${images.length};
+                
+                // If we scroll to the end, jump to the duplicate in the middle
+                if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - itemWidth) {
+                  // Jump to the middle set of duplicates
+                  setTimeout(() => {
+                    carousel.scrollLeft = itemWidth * totalOriginalItems;
+                  }, 200);
+                }
+                
+                // If we scroll to the beginning, jump to the duplicate in the middle
+                if (carousel.scrollLeft <= itemWidth) {
+                  setTimeout(() => {
+                    carousel.scrollLeft = itemWidth * totalOriginalItems * 2;
+                  }, 200);
+                }
+              });
+            });
+          `,
+        }}
+      />
     </div>
   );
 };
