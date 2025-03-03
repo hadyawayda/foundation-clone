@@ -34,7 +34,7 @@ const MediaCard = ({
       </div>
       <div className="mt-2">
         <p className="news-date font-black uppercase">{date}</p>
-        <p className="mt-2 news-description">{description}</p>
+        <p className="mt-2 news-description text-md xl:text-xl">{description}</p>
       </div>
     </Link>
   );
