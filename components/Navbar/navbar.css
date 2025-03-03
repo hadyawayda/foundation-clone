@@ -32,10 +32,6 @@ nav {
   border-left: 2px solid var(--hover-color) !important;
 }
 
-.nav-menu {
-  grid-template-columns: repeat(4, auto);
-}
-
 @media screen and (max-width: 899) {
   .navbar {
     height: 54px;
@@ -60,13 +56,14 @@ nav {
 
 @media screen and (min-width: 1280) {
   .navbar {
-    padding: 11.2px 50px 11.2px 1rem;
+    padding: 11.2px 20px 11.2px 1rem;
   }
 }
 
-@media screen and (min-width: 1460) {
+@media screen and (max-width: 1460) {
   .nav-menu {
-    display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
   }
 }
 

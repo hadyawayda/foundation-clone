@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const PrimaryNavbar = () => {
   return (
-    <div className="navbar flex items-center justify-between w-full py-2 xl:px-6 xl:pl-8">
+    <div className="navbar flex items-center justify-between w-full py-2 pr-8 xl:px-6 xl:pl-8">
       <div className="flex items-center px-5 pr-6">
         <Image
           className="better-ways-logo"
@@ -13,7 +13,7 @@ const PrimaryNavbar = () => {
           alt="CMA CGM Logo"
         />
       </div>
-      <ul className="nav-menu grid items-center font-extrabold text-center gap-y-4 ml-8 px-2 xl:ml-4">
+      <ul className="nav-menu flex items-center font-extrabold text-center gap-y-4 ml-8 pl-2 xl:ml-4">
         <li className="nav-item border-l-2">
           <Link className="px-5 xl:px-8" href="/cma-cgm-group">
             The CMA CGM Group
