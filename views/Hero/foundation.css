@@ -2,29 +2,85 @@
 	height: 45vw;
   }
   
-  /* Base state for label container */
   .foundation-label-container {
 	transition: opacity 0.4s ease-in-out !important;
 	opacity: 1;
   }
   
-  /* When hovering the main container, hide all labels */
   .foundation-container:hover .foundation-label-container {
 	opacity: 0;
   }
   
-  /* When hovering an image container, show its label container */
   .foundation-image-container:hover .foundation-label-container {
 	opacity: 1 !important;
   }
   
-  /* Arrow setup with transition but no transform by default */
   .foundation-arrow {
 	transition: transform 0.4s ease-in-out !important;
 	transform: translate(0, 0);
   }
   
-  /* ONLY animate arrow when directly hovering the label container */
   .foundation-label-container:hover .foundation-arrow {
 	transform: translate(10px, -10px);
   }
+  
+.carousel {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	height: 70vh;
+	scroll-behavior: smooth;
+}
+
+.carousel-item {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-arrow {
+	width: 26px!important;
+	height: 26px!important;
+}
+
+.carousel-label {
+	font-size: 42px;
+}
+
+.carousel-nav {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 8px;
+}
+
+.dot {
+width: 36px;
+height: 4px;
+background-color: white;
+border-radius: 3px;
+display: block;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover,
+.dot:focus {
+background-color: white;
+transform: scale(1.3);
+}
+  
