@@ -1,6 +1,7 @@
 .news-section {
-	background: url("/Assets/Images/bg-gradient.jpg") no-repeat center center fixed;
     background-size: cover;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(228, 228, 228, 0.5)), url("/Assets/Images/bg-gradient.jpg") no-repeat center center fixed;
+	
 }
 
 .news-label {
@@ -8,6 +9,19 @@
 	letter-spacing: .2rem;
     line-height: 1rem;
     font-size: .8rem;
+}
+
+.news-date {
+	font-family: "Resolve Sans Regular";
+	color: var(--hover-color);
+	font-size: 12.8px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.news-image-container {
+	height: 36vw;
 }
 
 @keyframes fadeInUp {
