@@ -62,8 +62,8 @@ nav {
 
 @media screen and (max-width: 1460) {
   .nav-menu {
-	display: grid;
-	grid-template-columns: repeat(4, auto);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
   }
 }
 
@@ -79,7 +79,7 @@ nav {
   height: 5px;
   width: 0;
   background-color: var(--hover-color);
-  transition: width 0.6s cubic-bezier(.27,.91,.73,1);
+  transition: width 0.6s cubic-bezier(0.27, 0.91, 0.73, 1);
 }
 
 @media screen and (max-width: 899px) {

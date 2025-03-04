@@ -19,7 +19,10 @@ const MediaCard = ({
   animationClass = "",
 }: MediaCardProps) => {
   return (
-    <Link href={url} className={`foundation-card w-full sm:w-1/3 px-6 ${animationClass}`}>
+    <Link
+      href={url}
+      className={`foundation-card w-full sm:w-1/3 px-6 py-2 ${animationClass}`}
+    >
       <div className="news-image-container relative overflow-hidden">
         <Image
           src={`/Assets/Images/${imageSrc}`}
@@ -33,8 +36,12 @@ const MediaCard = ({
         </div>
       </div>
       <div className="mt-2">
-        <p className="news-date font-black uppercase">{date}</p>
-        <p className="mt-2 news-description text-md xl:text-xl">{description}</p>
+        <p className="news-date font-black text-xs lg:text-base uppercase">
+          {date}
+        </p>
+        <p className="mt-2 news-description text-md xl:text-xl">
+          {description}
+        </p>
       </div>
     </Link>
   );

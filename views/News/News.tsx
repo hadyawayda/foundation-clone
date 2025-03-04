@@ -4,9 +4,9 @@ import "../../components/News/news.css";
 
 const News = () => {
   return (
-    <div className="news-section">
+    <div className="news-section my-8 px-16 md:px-16">
       <NewsSection />
-	  <SubscribeSection />
+      <SubscribeSection />
     </div>
   );
 };

@@ -16,11 +16,10 @@ const MobileFoundationsSection = () => {
         slidesPerView={1}
         loop={true}
         pagination={{
-			clickable: true,
-			renderBullet: (index, className) =>
-			  `<span class="${className} dot"></span>`,
-		  }}
-		  
+          clickable: true,
+          renderBullet: (index, className) =>
+            `<span class="${className} dot"></span>`,
+        }}
         className="w-full h-full"
       >
         {images.map((image, index) => (
