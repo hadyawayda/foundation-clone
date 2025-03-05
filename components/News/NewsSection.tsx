@@ -1,14 +1,12 @@
 import { newsData } from "../../constants/News";
-import MediaCard from "./MediaCard";
+import DesktopNewsSection from "./Desktop/DesktopNewsSection";
+import MobileNewsSection from "./Mobile/MobileNewsSection";
 
 const NewsSection = () => {
   return (
     <section className="pt-4 w-full flex justify-center">
-      <div className=" w-full flex justify-between gap-1">
-        {newsData.map((item, index) => (
-          <MediaCard key={index} {...item} />
-        ))}
-      </div>
+      <DesktopNewsSection {...{ newsData }} />
+      <MobileNewsSection {...{ newsData }} />
     </section>
   );
 };

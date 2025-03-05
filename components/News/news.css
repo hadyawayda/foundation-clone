@@ -26,6 +26,16 @@
 
 .news-image-container {
   height: 36vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-image-container img {
+  transition: transform 2s cubic-bezier(0.27, 0.91, 0.73, 1);
+}
+
+.news-image-container:hover img {
+  transform: scale(1.1);
 }
 
 .news-description {
@@ -76,4 +86,13 @@
 
 .delay-300 {
   animation-delay: 0.6s;
+}
+
+@media screen and (max-width: 899px) {
+  .desktop-news-container {
+    display: none;
+  }
+  .mobile-news-container {
+    display: block;
+  }
 }

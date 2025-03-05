@@ -1,4 +1,4 @@
-.foundation-container {
+.desktop-foundation-container {
   height: 45vw;
 }
 
@@ -7,7 +7,7 @@
   opacity: 1;
 }
 
-.foundation-container:hover .foundation-label-container {
+.desktop-foundation-container:hover .foundation-label-container {
   opacity: 0;
 }
 
@@ -38,4 +38,13 @@
   height: fit-content !important;
   display: flex;
   justify-content: center !important;
+}
+
+@media screen and (max-width: 899px) {
+  .desktop-foundation-container {
+    display: none;
+  }
+  .mobile-foundation-container {
+    display: block;
+  }
 }
