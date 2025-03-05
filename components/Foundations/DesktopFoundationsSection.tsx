@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { images } from "../../constants/Foundation";
+import { ImageProps } from "../../types/FoundationImageType";
 
-const DesktopFoundationsSection = () => {
+const DesktopFoundationsSection = ({ images }: { images: ImageProps[] }) => {
   return (
     <div className="foundation-container hidden lg:flex w-full h-[45vw] group">
       {images.map((image, index) => (

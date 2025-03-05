@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import "./fillbar.css";
 
 const FillBar = () => {
   useEffect(() => {
