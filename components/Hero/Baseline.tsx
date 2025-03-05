@@ -1,6 +1,6 @@
 const Baseline = () => {
   return (
-    <div className="baseline-container flex flex-col items-center px-8 my-3">
+    <section className="baseline-container flex flex-col items-center px-8 my-3">
       <h1 className="baseline-heading font-extrabold">CMA CGM Foundation</h1>
 
       <h5 className="baseline-paragraph font-extrabold text-center mt-12">
@@ -19,7 +19,7 @@ const Baseline = () => {
         projects in France, Lebanon, and around the world, and assisted 55
         entrepreneurs through its social incubator, Le Phare.
       </h5>
-    </div>
+    </section>
   );
 };
 

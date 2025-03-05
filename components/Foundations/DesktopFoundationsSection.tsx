@@ -4,7 +4,7 @@ import { ImageProps } from "../../types/FoundationImageType";
 
 const DesktopFoundationsSection = ({ images }: { images: ImageProps[] }) => {
   return (
-    <div className="desktop-foundation-container flex w-full h-[45vw] group">
+    <section className="desktop-foundation-container flex w-full h-[45vw] group">
       {images.map((image, index) => (
         <Link
           key={index}
@@ -38,7 +38,7 @@ const DesktopFoundationsSection = ({ images }: { images: ImageProps[] }) => {
           )}
         </Link>
       ))}
-    </div>
+    </section>
   );
 };
 

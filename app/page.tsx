@@ -1,4 +1,4 @@
-import Foundations from "../views/Body/Foundations";
+import Foundations from "../views/Foundations/Foundations";
 import Hero from "../views/Hero/Hero";
 import News from "../views/News/News";
 

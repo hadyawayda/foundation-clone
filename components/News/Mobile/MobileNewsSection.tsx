@@ -9,7 +9,7 @@ import { NewsDataProps } from "../../../types/NewsData";
 
 const MobileNewsSection = ({ newsData }: { newsData: NewsDataProps[] }) => {
   return (
-    <div className="mobile-news-container hidden relative w-full h-[70vh]">
+    <div className="mobile-news-container py-2 px-[22.68] hidden relative w-full">
       <Swiper
         modules={[Pagination]}
         spaceBetween={0}
@@ -27,14 +27,12 @@ const MobileNewsSection = ({ newsData }: { newsData: NewsDataProps[] }) => {
             <Link href={item.url} className="relative w-full h-full block">
               {/* News Image */}
               <Image
-                className="object-cover w-full h-full"
+                className="media-card-image object-cover w-full h-full"
                 src={`/Assets/Images/${item.imageSrc}`}
                 width={1024}
                 height={768}
                 alt={item.title}
               />
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40"></div>
 
               {/* Label, Date & Arrow */}
               <div className="absolute bottom-2 left-6 right-8 flex items-center justify-between px-4 py-6">

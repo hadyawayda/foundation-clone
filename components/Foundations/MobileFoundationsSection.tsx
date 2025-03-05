@@ -9,7 +9,7 @@ import { ImageProps } from "../../types/FoundationImageType";
 
 const MobileFoundationsSection = ({ images }: { images: ImageProps[] }) => {
   return (
-    <div className="mobile-foundation-container hidden relative w-full h-[70vh]">
+    <section className="mobile-foundation-container hidden relative w-full h-[70vh]">
       <Swiper
         modules={[Pagination]}
         spaceBetween={0}
@@ -53,7 +53,7 @@ const MobileFoundationsSection = ({ images }: { images: ImageProps[] }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 

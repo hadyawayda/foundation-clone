@@ -6,7 +6,8 @@
       rgba(228, 228, 228, 0.5)
     ),
     url("/Assets/Images/bg-gradient.jpg") no-repeat center center fixed;
-  padding: 32px 64px;
+  margin: 2rem 0;
+  padding: 2rem 4rem;
 }
 
 .news-label {
@@ -25,7 +26,6 @@
 }
 
 .news-image-container {
-  height: 36vw;
   overflow: hidden;
   position: relative;
 }
@@ -88,11 +88,25 @@
   animation-delay: 0.6s;
 }
 
+.media-card-image {
+  height: 32.6vw;
+}
+
 @media screen and (max-width: 899px) {
   .desktop-news-container {
     display: none;
   }
   .mobile-news-container {
     display: block;
+  }
+  .news-section {
+    padding: 0.5rem 1rem;
+    background: url("/Assets/Images/bg-gradient.jpg") 0% 0% / cover;
+  }
+  .mobile-news-container {
+    padding: 0.5rem calc(1.275rem + 0.3vw);
+  }
+  .media-card-image {
+    height: 109vw;
   }
 }

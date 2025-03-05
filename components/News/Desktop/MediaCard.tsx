@@ -21,7 +21,7 @@ const MediaCard = ({
   return (
     <Link
       href={url}
-      className={`foundation-card w-full sm:w-1/3 px-6 py-2 ${animationClass}`}
+      className={`foundation-card w-full px-6 py-2 ${animationClass}`}
     >
       <div className="news-image-container relative overflow-hidden">
         <Image
@@ -29,7 +29,7 @@ const MediaCard = ({
           width={600}
           height={400}
           alt={title}
-          className="h-full w-full object-cover"
+          className="media-card-image w-full object-cover"
         />
         <div className="news-label absolute top-10 left-0 bg-white px-4 py-1 text-xs font-bold uppercase">
           {title}

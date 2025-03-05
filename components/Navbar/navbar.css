@@ -1,6 +1,7 @@
+/* z-index is 2 because swiper is enforcing a z-index of 1 on its component */
 nav {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar {
@@ -35,6 +36,7 @@ nav {
 @media screen and (max-width: 899) {
   .navbar {
     height: 54px;
+    padding-right: calc(0.5rem + 1vw);
   }
   .nav-menu,
   .preheader {
