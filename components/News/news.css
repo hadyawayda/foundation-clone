@@ -91,7 +91,6 @@
 .media-card-image {
   height: 32.6vw;
 }
-
 @media screen and (max-width: 899px) {
   .desktop-news-container {
     display: none;
@@ -103,10 +102,20 @@
     padding: 0.5rem 1rem;
     background: url("/Assets/Images/bg-gradient.jpg") 0% 0% / cover;
   }
+  .news-date {
+    font-size: 12.8px;
+    line-height: 32px;
+  }
+  .news-description {
+    line-height: 32px;
+  }
   .mobile-news-container {
     padding: 0.5rem calc(1.275rem + 0.3vw);
   }
   .media-card-image {
     height: 109vw;
+  }
+  .swiper-pagination-bullets {
+    bottom: 20px !important;
   }
 }

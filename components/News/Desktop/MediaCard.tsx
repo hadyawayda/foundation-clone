@@ -35,13 +35,11 @@ const MediaCard = ({
           {title}
         </div>
       </div>
-      <div className="mt-2">
-        <p className="news-date font-black text-xs lg:text-base uppercase">
+      <div>
+        <p className="news-date font-black text-base uppercase py-2 leading-6">
           {date}
         </p>
-        <p className="mt-2 news-description text-md xl:text-xl">
-          {description}
-        </p>
+        <p className="news-description text-md xl:text-xl">{description}</p>
       </div>
     </Link>
   );

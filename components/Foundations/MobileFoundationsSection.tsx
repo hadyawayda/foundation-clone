@@ -17,7 +17,7 @@ const MobileFoundationsSection = ({ images }: { images: ImageProps[] }) => {
         loop={true}
         pagination={{
           clickable: true,
-          renderBullet: (index, className) =>
+          renderBullet: (_, className) =>
             `<span class="${className} dot"></span>`,
         }}
         className="w-full h-full"
